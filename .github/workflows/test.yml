@@ -33,7 +33,7 @@ jobs:
 
       - name: install dependencies
         run: |
-          dzil authordeps --missing | cpanm
+          dzil authordeps --missing | cpanm --notest
 
       - name: Test
         run: |
