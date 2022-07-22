@@ -31,6 +31,10 @@ jobs:
           install-modules-with: cpanm
           install-modules: Dist::Zilla
 
+      - name: install dependencies
+        run: |
+          dzil authordeps --missing | cpanm
+
       - name: Test
         run: |
           dzil test --all
